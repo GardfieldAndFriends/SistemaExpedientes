@@ -84,9 +84,9 @@ use_janrain(auth, filename='private/janrain.key')
 # auth.enable_record_versioning(db)
 
 
-db.define_table('expedientes',
-                Field('expediente_id','long')
-                Field('letra','string', length = 4, requires=IS_NOT_EMPTY()),
+db.define_table('Expedientes',
+                Field('expediente_id','long'),
+                Field('letra','string', length = 4, requires = IS_NOT_EMPTY()) ,
                 Field('numero',requires=IS_INT_IN_RANGE(0,99999)),
                 Field('anio',requires=IS_INT_IN_RANGE(0,9999) ),
                 Field('iniciador','string'),
